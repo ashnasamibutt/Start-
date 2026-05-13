@@ -13,6 +13,9 @@ public:
     bool operator == (const Box&other){
         return volume == other.volume;
     }
+    void dispalyvolume(){
+        cout<<"Volume of this box is: "<<volume<<endl;
+    }
 };
 int main{
     Box b1(50);
@@ -28,4 +31,8 @@ int main{
     }
     else 
     cout<<"b1 and b3 are not identical"<<endl;
+    b1.displayvolume();
+    b2.displayvolume();
+    b3.displayvolume();
+
 }
