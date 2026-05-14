@@ -13,7 +13,7 @@ public:
     bool operator == (const Box&other){
         return volume == other.volume;
     }
-    void dispalyvolume(){
+    void displayvolume(){
         cout<<"Volume of this box is: "<<volume<<endl;
     }
 };
@@ -35,4 +35,7 @@ int main{
     b2.displayvolume();
     b3.displayvolume();
 
+    cout<<"THis is a new change"<<endl;
+    return 0 ;
 }
+
