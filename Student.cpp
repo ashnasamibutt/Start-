@@ -53,8 +53,11 @@ public:
 int main (){
     Student s1;
     Student s2("Rida","CS-100",19,90.5);
-    s2.setmarks(100);
     s1.displayInfo();
     cout<<"-----------------------------"<<endl;
     s2.displayInfo();
+    s2.setmarks(100);
+    cout<<"After updating marks for s2:"<<endl;
+    s2.displayInfo();
 }
+
