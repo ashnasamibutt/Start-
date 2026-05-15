@@ -17,7 +17,7 @@ public:
         cout<<"Volume of this box is: "<<volume<<endl;
     }
 };
-int main{
+int main(){
     Box b1(50);
     Box b2(50);
     Box b3(30);
@@ -31,11 +31,12 @@ int main{
     }
     else 
     cout<<"b1 and b3 are not identical"<<endl;
-    b1.displayvolume();
-    b2.displayvolume();
-    b3.displayvolume();
+    cout<<"(Box1)"; b1.displayvolume();
+    cout<<"(Box2)"; b2.displayvolume();
+    cout<<"(Box3)"; b3.displayvolume();
 
     cout<<"THis is a new change"<<endl;
+    cout<<"So we found the identical boxes!"<<endl;
     return 0 ;
 }
 
