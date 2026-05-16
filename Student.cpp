@@ -16,6 +16,10 @@ public:
     cout<<"Parameterized constructor is called"<<endl;
    }
 
+   Student(const Student &other) : name(other.name), roll_No(other.roll_No),age(other.age),marks(other.marks) {
+      cout<<"Copy constructor is called"<<endl;
+   }
+
    void setname(string n){
     name = n;
    }
@@ -59,5 +63,8 @@ int main (){
     s2.setmarks(100);
     cout<<"After updating marks for s2:"<<endl;
     s2.displayInfo();
+    Student s3(s2);
+    cout<<"Information for s3 (copy of s2):"<<endl;
+    s3.displayInfo();
 }
 
