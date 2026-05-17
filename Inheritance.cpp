@@ -64,6 +64,30 @@ public:
    }
 };
 
+//Multilevel inheritance 
+class PhDStudent : public Student {
+private:
+    string thesis;
+    string supervisor;
+public:
+   PhDStudent() : Student() , thesis("None") , supervisor("Unknown") {
+      cout<<"PhD Student's default constructor"<<endl;
+   }
+   PhDStudent(string n,int a,string r,double m,string t,string sup) : Student(n,a,r,m) , thesis(t) , supervisor(sup) {
+       cout<<"PhD student's parameterized constructor"<<endl;
+   }
+
+   void setThesis(string t) { thesis = t; }
+   void setSupervisor(string sup) { supervisor = sup; }
+   string getThesis() { return thesis;}
+   string getSupervisor() { return supervisor;  }
+
+   void displayInfo() {
+      Student::displayInfo();
+      cout<<"Thesis: "<<thesis<<" , "<<"Supervisor: "<<supervisor<<endl;
+   }
+};
+
 int main() {
 
   Student s1("Arooj",19,"CS-167",98);
@@ -71,6 +95,9 @@ int main() {
 
   Teacher t1("Sir Ahmad",35,"OOP",95000);
   t1.displayInfo();
+
+  PhDStudent p1("Rida",22,"Cs-300",95,"AI Research","Sir Atif");
+  p1.displayInfo();
 
   return 0;
 }
